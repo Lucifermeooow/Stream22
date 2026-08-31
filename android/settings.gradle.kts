@@ -19,6 +19,10 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+
+        maven {
+            url = java.net.URI("https://jitpack.io")
+        }
     }
 }
 
@@ -36,11 +40,11 @@ dependencyResolutionManagement {
         mavenCentral()
 
         maven {
-            url = uri("https://jitpack.io")
+            url = java.net.URI("https://jitpack.io")
         }
     }
 }
 
-rootProject.name = "stream22"
+rootProject.name = "streamgit101"
 
 include(":app")
