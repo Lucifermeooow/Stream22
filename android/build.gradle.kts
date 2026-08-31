@@ -7,15 +7,6 @@ allprojects {
             url = java.net.URI("https://jitpack.io")
         }
     }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        compilerOptions {
-            freeCompilerArgs.addAll(
-                "-Xskip-metadata-version-check",
-                "-Xskip-prerelease-check"
-            )
-        }
-    }
 }
 
 subprojects {
