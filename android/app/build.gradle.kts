@@ -1,19 +1,21 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
-    namespace = "com.ahmed.streamv21"
-    compileSdk = 35
+    namespace = "com.ahmed.streamgit101"
+
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.ahmed.streamv21"
+        applicationId = "com.ahmed.streamgit101"
+
         minSdk = 24
         targetSdk = 35
-        versionCode = 21
-        versionName = "21.0.0"
+
+        versionCode = 22
+        versionName = "22.0.0"
     }
 
     compileOptions {
@@ -24,14 +26,8 @@ android {
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("debug")
-            isMinifyEnabled = false
-            isShrinkResources = false
         }
     }
-}
-
-tasks.matching { it.name.contains("AarMetadata") }.configureEach {
-    enabled = false
 }
 
 flutter {
